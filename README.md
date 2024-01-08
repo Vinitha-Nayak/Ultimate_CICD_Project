@@ -64,6 +64,20 @@ systemctl restart docker`
 
 `http://<ec2-instance-public-ip>:8080/restart`
 
-20. Build 
+20. Add the Credentials for Docker and Github
+
+    Dashboard > Manage Jenkins > Credentials > System > Global credentials (unrestricted)
+       Add `Username` `password` `id`
+
+    Dashboard > Manage Jenkins > Credentials > System > Global credentials (unrestricted) > choose secret text
+       specify `secret` id
+
+21. Build Now
+
+    
+    
+
+
+
 
 
