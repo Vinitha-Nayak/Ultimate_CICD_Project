@@ -47,3 +47,23 @@ https://<ipaddress>:8080
 
 15.Select `pipline script from scm' > choose scm `git` > Provide the github repository URL > Specify the branch > Specify the `Jenkinsfile` path
 
+16. Install docker
+
+`sudo apt install docker.io`
+
+17. Grant permission
+
+`sudo su - 
+usermod -aG docker jenkins
+usermod -aG docker ubuntu
+systemctl restart docker`
+
+18.Go to jenkins > `Manage Jenkins` > `plugins` > `Available plugins` > choose Docker Pipeline to install the plugin
+
+19. Restart the jenkins
+
+`http://<ec2-instance-public-ip>:8080/restart`
+
+20. Build 
+
+
