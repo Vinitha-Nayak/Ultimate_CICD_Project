@@ -47,7 +47,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "https://github.com/Vinitha-Nayak/Ultimate_CICD_Project.git"
+            GIT_REPO_NAME = "Ultimate_CICD_Project"
             GIT_USER_NAME = "Vinitha-Nayak"
         }
         steps {
