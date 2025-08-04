@@ -32,7 +32,7 @@ jobs:
         run: ls -R
 
       - name: Build Maven package
-        working-directory: java-maven-sonar-argocd-helm-k8s/sprint-boot-app
+        working-directory: java-maven-sonar-argocd-helm-k8s/spring-boot-app
         run: mvn clean package --no-transfer-progress
 
       - name: Set Docker image tag
@@ -40,7 +40,7 @@ jobs:
         run: echo "TAG=${GITHUB_SHA::7}" >> $GITHUB_ENV
 
       - name: Build Docker image
-        working-directory: java-maven-sonar-argocd-helm-k8s/sprint-boot-app
+        working-directory: java-maven-sonar-argocd-helm-k8s/spring-boot-app
         run: docker build -t my-app:${{ env.TAG }} .
 
       # Optional: Push image to DockerHub
